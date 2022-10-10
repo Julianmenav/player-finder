@@ -18,6 +18,8 @@ const getSummonerData = async (req, res) => {
       return res.status(error.response.status).json(error.response.data);
     });
 
+  if( summonerData.data == undefined) return;
+
   const { id, profileIconId, summonerLevel } = summonerData.data;
   
   const rankData = await axios
