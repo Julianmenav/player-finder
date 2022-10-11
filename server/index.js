@@ -1,11 +1,17 @@
 require("dotenv").config();
 
 const express = require("Express");
+const cors = require("cors");
 const app = express();
 const { getSummonerData } = require("./middleware/summoner");
 
 const PORT = process.env.PORT ?? 3001;
 
+const corsOptions = {
+  origin: process.env.CORS
+}
+
+app.use(cors(corsOptions));
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
