@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowGuide(true);
-    }, 4000)
+    }, 3500)
     
   }, []);
 
@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center mx-auto">
-      <div className="mt-24 mx-8 rounded-3xl p-5 bg-gray-800 shadow-2xl max-w-md md:max-w-xl xl:max-w-4xl">
+      <div className="mt-24 mx-8 rounded-xl p-7 bg-gray-800 shadow-2xl max-w-md md:max-w-xl xl:max-w-2xl">
         <h1 className="font-bold text-center text-white text-4xl md:text-6xl xl:text-6xl">League of Legends player finder</h1>
       </div>
       <p className="mt-6 mb-10 mx-10 text-lg text-center text-white font-bold max-w-lg">
