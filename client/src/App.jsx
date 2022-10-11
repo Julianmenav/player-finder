@@ -1,11 +1,11 @@
 import Navigation from "./Routes/Navigation";
-import "./style/App.css";
+import 'tailwindcss/tailwind.css'
 
 function App() {
   return (
-    <>
+    <div className="bg-blue-300 min-h-screen">
       <Navigation />
-    </>
+    </div>
   );
 }
 
