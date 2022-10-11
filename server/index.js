@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const express = require("Express");
+const express = require("express");
 const cors = require("cors");
 const app = express();
 const { getSummonerData } = require("./middleware/summoner");
