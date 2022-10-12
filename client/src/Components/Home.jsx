@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar";
 const Home = () => {
   const [showGuide, setShowGuide] = useState(false);
   const [example, setExample] = useState("");
-  const examples = ["javi1310", "josemaSYT", "ŽINK12345678910", "Kyxx"]
+  const examples = import.meta.env.VITE_SAMPLE_PLAYERS.split(";");
 
   useEffect(() => {
     setTimeout(() => {
