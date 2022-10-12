@@ -23,7 +23,7 @@ const Home = () => {
   }
 
   return (
-    <div className="flex flex-col items-center mx-auto">
+    <div className="flex flex-col items-center">
       <div className="mt-12 md:mt-24 mx-8 rounded-xl p-7 bg-gray-800 shadow-2xl max-w-md md:max-w-xl xl:max-w-2xl">
         <h1 className="font-bold text-center text-white text-4xl md:text-6xl xl:text-6xl">League of Legends player finder</h1>
       </div>

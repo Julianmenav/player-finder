@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../services/api";
+import SearchBar from "./SearchBar";
+import UserCard from "./UserCard";
 
 const Search = () => {
   const [error, setError] = useState(null);
@@ -31,12 +33,10 @@ const Search = () => {
   ) : error ? (
     <h1>El usuario que buscas no existe</h1>
   ) : (
-    <>
-      <h2>Nombre: {summonerName}</h2>
-      <h2>Nivel: {userData.summonerLevel}</h2>
-      <h2>Rank: {userData.rankData[0].tier}</h2>
-      <img src={userData.profileIcon} alt="" />
-    </>
+    <div className="flex flex-col items-center">
+      <UserCard userData={userData}/>
+      <SearchBar  />
+    </div>
   );
 };
 
