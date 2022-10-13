@@ -40,8 +40,8 @@ const UserCard = ({ userData }) => {
       <div className="mt-2 text-2xl self-start font-mono font-semibold weight">
         {userData.summonerName}
       </div>
-      <div className="mt-3 w-full h-80 flex flex-col justify-center">
-        {isEmpty(rankData) ? noRankInfo : rankData}
+      <div className="m-auto w-full flex flex-col justify-center">
+          {isEmpty(rankData) ? noRankInfo : rankData}
       </div>
     </div>
   );
