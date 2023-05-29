@@ -10,28 +10,22 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowGuide(true);
-    }, 3500)
-    
+    }, 3000);
   }, []);
 
   const provideExample = () => {
-    const randomNumber = Math.floor(Math.random() * examples.length)
-    const newExample = examples[randomNumber]
+    const randomNumber = Math.floor(Math.random() * examples.length);
+    const newExample = examples[randomNumber];
     if (newExample == example) return provideExample();
 
     setExample(newExample);
-  }
+  };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="mt-12 md:mt-24 mx-8 rounded-xl p-7 bg-gray-800 shadow-2xl max-w-md md:max-w-xl xl:max-w-2xl">
-        <h1 className="font-bold text-center text-white text-4xl md:text-6xl xl:text-6xl">League of Legends player finder</h1>
-      </div>
-      <p className="mt-6 mb-10 mx-10 text-lg text-center text-white font-bold max-w-lg">
-        Introduce el nombre de un jugador para ver sus datos mediante la API de Riot Games.
-      </p>
-      <SearchBar example={example}/>
-      {showGuide ? <GuideText show={showGuide} callback={provideExample}/> : null}
+    <div className="pt-14 flex flex-col justify-center items-center">
+      <h1 className="text-6xl sm:text-8xl lg:text-9xl text-white font-monse bg-dark-blue px-0.5">LOL FIND</h1>
+      <SearchBar example={example} />
+      {true && <GuideText show={showGuide} callback={provideExample} />}
     </div>
   );
 };

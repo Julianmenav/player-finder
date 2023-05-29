@@ -1,9 +1,8 @@
 import Navigation from "./Routes/Navigation";
-import 'tailwindcss/tailwind.css'
 
 function App() {
   return (
-    <div className="bg-blue-300 min-h-screen">
+    <div className="bg-dark-blue bg-grid bg-top min-h-screen">
       <Navigation />
     </div>
   );
